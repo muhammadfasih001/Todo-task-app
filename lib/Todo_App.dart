@@ -40,7 +40,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
         child: ListView(
           children: [
             DrawerHeader(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: tdBgColor,
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(50),
@@ -57,10 +57,10 @@ class _MyTodoAppState extends State<MyTodoApp> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Text(
+            const Text(
               textAlign: TextAlign.center,
               "Muhammad Fasih",
               style: TextStyle(
@@ -68,10 +68,10 @@ class _MyTodoAppState extends State<MyTodoApp> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(
                 Icons.add,
                 size: 35,
@@ -82,10 +82,10 @@ class _MyTodoAppState extends State<MyTodoApp> {
                 style: TextStyle(fontSize: 18),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(
                 Icons.delete_outline,
                 size: 35,
@@ -96,10 +96,10 @@ class _MyTodoAppState extends State<MyTodoApp> {
                 style: TextStyle(fontSize: 18),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(
                 Icons.edit_note,
                 size: 35,
@@ -110,10 +110,10 @@ class _MyTodoAppState extends State<MyTodoApp> {
                 style: TextStyle(fontSize: 18),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(
                 Icons.edit,
                 size: 29,
@@ -124,10 +124,10 @@ class _MyTodoAppState extends State<MyTodoApp> {
                 style: TextStyle(fontSize: 18),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(
                 Icons.contact_support_outlined,
                 size: 29,
@@ -138,10 +138,10 @@ class _MyTodoAppState extends State<MyTodoApp> {
                 style: TextStyle(fontSize: 18),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(
                 Icons.exit_to_app_outlined,
                 size: 35,
@@ -156,7 +156,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
         ),
       ),
       appBar: AppBar(
-        iconTheme: IconThemeData(color: tdBgColor),
+        iconTheme: const IconThemeData(color: tdBgColor),
         centerTitle: true,
         elevation: 0,
         backgroundColor: tdBgColor,
@@ -166,14 +166,14 @@ class _MyTodoAppState extends State<MyTodoApp> {
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.menu_open,
                 color: Colors.blue,
               ),
             );
           },
         ),
-        title: Text(
+        title: const Text(
           "Todo App",
           style: TextStyle(color: Colors.blue, fontSize: 25),
         ),
@@ -181,20 +181,20 @@ class _MyTodoAppState extends State<MyTodoApp> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextField(
                 controller: addItemController,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
                 ),
                 decoration: InputDecoration(
                   hintText: "Add a new todo item.....",
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
                   ),
@@ -203,14 +203,14 @@ class _MyTodoAppState extends State<MyTodoApp> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.blue,
                       width: 3,
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(50),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       width: 3,
                       color: Colors.grey,
                     ),
@@ -233,7 +233,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
               onPressed: () {
                 addItem();
               },
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 size: 35,
               ),
@@ -243,7 +243,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
             ),
             ListView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: todoItemList.length,
               itemBuilder: (context, index) {
                 return Column(
@@ -251,9 +251,9 @@ class _MyTodoAppState extends State<MyTodoApp> {
                     Container(
                       height: 55,
                       width: 350,
-                      margin: EdgeInsets.only(
+                      margin: const EdgeInsets.only(
                           left: 10, right: 10, top: 10, bottom: 5),
-                      padding: EdgeInsets.only(left: 30),
+                      padding: const EdgeInsets.only(left: 30),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                         color: Colors.blue,
@@ -263,7 +263,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
                         children: [
                           Text(
                             todoItemList[index],
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 20,
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600),
@@ -283,11 +283,11 @@ class _MyTodoAppState extends State<MyTodoApp> {
                                           borderRadius:
                                               BorderRadius.circular(30),
                                         ),
-                                        title: Row(
+                                        title: const Row(
                                           children: [],
                                         ),
                                         content: TextField(
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -311,7 +311,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
                                         actions: [
                                           ElevatedButton(
                                             style: ElevatedButton.styleFrom(
-                                              fixedSize: Size(90, 40),
+                                              fixedSize: const Size(90, 40),
                                               backgroundColor: Colors.red,
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
@@ -321,7 +321,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
                                             onPressed: () {
                                               Navigator.pop(context);
                                             },
-                                            child: Text(
+                                            child: const Text(
                                               "Cancle",
                                               style: TextStyle(
                                                 fontSize: 16,
@@ -334,7 +334,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
                                                 borderRadius:
                                                     BorderRadius.circular(50),
                                               ),
-                                              fixedSize: Size(90, 40),
+                                              fixedSize: const Size(90, 40),
                                             ),
                                             onPressed: () {
                                               setState(() {
@@ -345,7 +345,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
                                               updateTodoItemController.clear();
                                               Navigator.pop(context);
                                             },
-                                            child: Text(
+                                            child: const Text(
                                               "Update",
                                               style: TextStyle(
                                                 fontSize: 16,
@@ -357,7 +357,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
                                     },
                                   );
                                 },
-                                icon: Icon(Icons.update),
+                                icon: const Icon(Icons.update),
                                 iconSize: 30,
                                 color: Colors.white,
                               ),
@@ -365,7 +365,7 @@ class _MyTodoAppState extends State<MyTodoApp> {
                                 onPressed: () {
                                   removeItem(index);
                                 },
-                                icon: Icon(Icons.delete),
+                                icon: const Icon(Icons.delete),
                                 iconSize: 30,
                                 color: Colors.white,
                               ),
@@ -384,125 +384,3 @@ class _MyTodoAppState extends State<MyTodoApp> {
     );
   }
 }
-/*import 'package:flutter/material.dart';
-
-class MyTodoApp extends StatefulWidget {
-  const MyTodoApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyTodoApp> createState() => _MyTodoAppState();
-}
-
-class _MyTodoAppState extends State<MyTodoApp> {
-  TextEditingController addItemController = TextEditingController();
-  List<String> todoItemList = [];
-
-  void addItem() {
-    String newItem = addItemController.text;
-    if (newItem.isNotEmpty) {
-      setState(() {
-        todoItemList.add(newItem);
-        addItemController.clear();
-      });
-    }
-  }
-
-  void removeItem(int index) {
-    setState(() {
-      todoItemList.removeAt(index);
-    });
-  }
-
-  void updateItem(int index, String updatedItem) {
-    setState(() {
-      todoItemList[index] = updatedItem;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Todo List App'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            TextField(
-              controller: addItemController,
-              decoration: InputDecoration(
-                hintText: 'Add a new todo item...',
-              ),
-            ),
-            ElevatedButton(
-              onPressed: addItem,
-              child: Text('Add Item'),
-            ),
-            SizedBox(height: 16),
-            Expanded(
-              child: ListView.builder(
-                itemCount: todoItemList.length,
-                itemBuilder: (context, index) {
-                  return Dismissible(
-                    key: Key(todoItemList[index]),
-                    onDismissed: (direction) {
-                      removeItem(index);
-                    },
-                    child: ListTile(
-                      title: Text(todoItemList[index]),
-                      trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          IconButton(
-                            onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (context) {
-                                  TextEditingController updateController =
-                                      TextEditingController(
-                                    text: todoItemList[index],
-                                  );
-                                  return AlertDialog(
-                                    title: Text('Update Item'),
-                                    content: TextField(
-                                      controller: updateController,
-                                    ),
-                                    actions: [
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          updateItem(
-                                            index,
-                                            updateController.text,
-                                          );
-                                          Navigator.pop(context);
-                                        },
-                                        child: Text('Update'),
-                                      ),
-                                    ],
-                                  );
-                                },
-                              );
-                            },
-                            icon: Icon(Icons.edit),
-                          ),
-                          IconButton(
-                            onPressed: () {
-                              removeItem(index);
-                            },
-                            icon: Icon(Icons.delete),
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}*/
